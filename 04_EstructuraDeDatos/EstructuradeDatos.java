@@ -1,0 +1,199 @@
+
+/*
+
+1.- Bono o descuento por edad
+2.- Convertir numeros decimales a binarios
+3.- Convertir temperaturas celcius, kelvin y rankine
+4.- Numerto de positivos y negativos segun una lista de numeros
+5.- Tiendita peke
+6-. Area y perimetro de figuras geometricas
+7.- Tabla 
+8.- Factorial
+9.- Dibujitos de codigo
+10.- Figuras huecas de codigo
+11.- Patrones de codigo
+12.- Diamante de codigo
+13.- Calculadora
+14.- Salir
+
+*/
+
+import java.util.Scanner;
+
+
+
+class EstructuradeDatos{
+    //Programa 1
+    /*EL PROGRAMA DEBE SOLICITAR LA EDAD DEL USUARIO. SI ÉSTA ES MAYOR DE 65, 
+     AL PRECIO DEL ABONO SE LE APLICA UN DESCUENTO DEL 40%.
+     SI LA EDAD ES MENOR QUE 21, SE PREGUNTA AL USUARIO SI SUS PADRES SON 
+     SOCIOS. SI LA RESPUESTA ES AFIRMATIVA, SE LES APLICA UN DESCUENTO DEL 
+     45%; EN CASO CONTRARIO, SE LES APLICA UN 25%. 
+
+     variable edad
+     condiciones
+    */
+
+    public static void main(String[] args){
+
+        //objetos
+        Scanner entrada = new Scanner(System.in);
+        //Scanner letras = new Scanner(System.in); 
+
+
+
+        //variables
+        int edad, opcion, socio, numbinario; 
+        double precio, bono;
+        char letras;
+        String binario = "";
+
+
+
+
+        //cuerpo del programa
+
+
+        //menu de las opciones de arriba
+        do{
+        System.out.println("Bienvenido a tu primer programa de estructuras");
+        System.out.println("Por favor elija la opcion deseada");
+        System.out.println("1.- Descuento por edad");
+        System.out.println("2.- Convertir numero decimal a binario");
+        System.out.println("3.- Conversiones de temperatura");
+        System.out.println("4.- Numeros positivos y negativos");
+        System.out.println("5.- Tienda");
+        System.out.println("6.- Area y Perimetros");
+        System.out.println("7.- Tabla");
+        System.out.println("8.- Factorial");
+        System.out.println("9.- Dibujos de codigos");
+        System.out.println("10.- Figura hueca");
+        System.out.println("11-. Patrones de codigo");
+        System.out.println("12.- Diamante");
+        System.out.println("13.- Calculadora");
+        System.out.println("14.- Salir");
+
+        //condicion switch para el menu
+
+        opcion = entrada.nextInt();
+
+
+        switch(opcion){
+
+            case 1: //problema 1
+                System.out.println("Ingresa el Bono A cobrar");
+                bono = entrada.nextDouble();
+                System.out.println("Ingresa la edad");
+                edad = entrada.nextInt();
+                //La estructura de condiciones
+                //SI ÉSTA ES MAYOR DE 65, AL PRECIO DEL ABONO SE LE APLICA UN DESCUENTO DEL 40%.
+                if(edad >= 65){
+                    //proceso
+                    bono = bono*.6;
+                    System.out.println("Su descuento es de 40%");
+                    System.out.println("El total a pagar es de:" + bono);
+                }
+                /*
+                SI LA EDAD ES MENOR QUE 21, SE PREGUNTA AL USUARIO SI SUS PADRES SON 
+                SOCIOS. SI LA RESPUESTA ES AFIRMATIVA, SE LES APLICA UN DESCUENTO DEL 
+                45%; EN CASO CONTRARIO, SE LES APLICA UN 25%.
+                */
+                if(edad <= 21){
+                    System.out.println("Si tus padres son socios ingresa el uno, sino lo son ingresa 2");
+                    socio = entrada.nextInt();
+
+                    switch(socio){
+                        case 1:
+                            bono = bono*.55;
+                            System.out.println("Su descuento fue del 45%");
+                            System.out.println("El total a pagar es de: " + bono);
+                            break;
+                        case 2:
+                            bono = bono*.75;
+                            System.out.println("Su descuento fue del 75%");
+                            System.out.println("El total a pagar es de: " + bono);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida"); 
+                    }
+                }
+                System.out.println("Tu edad es de:" + edad);
+                System.out.println("El total a pagar es: " + bono);
+                break;
+
+                case 2:
+                    System.out.println("Ingrese un numero positivo entero que desee convertir a binario");
+                    numbinario = entrada.nextInt();
+                    /*
+                    Tengo que comprobar que sea positivo?
+                    condicion donde numbinario > 0
+                    entonces aplico el algoritmo de convertir a binario
+                    sino no se puede convertir
+
+                    */
+
+                    if(numbinario > 0){
+                        /*
+                        Como el algoritmo para convertir un numero decimal en binario
+                        aplicar al numbinario
+                        */
+                        while(numbinario > 0){
+                            if(numbinario % 2 == 0){
+                                binario = "0" + binario;
+                            }else{
+                                binario = "1" + binario;
+                            }
+                            numbinario = (int)numbinario / 2;
+                        }
+                    }else if (numbinario == 0){
+                        binario = "0";
+                    }else{
+                        binario = "No se puede convertir el numero, ingrese solo positivos.";
+                    }
+                    System.out.println("EL numero convertido a binario es:" + binario);
+                    break;
+
+                case 3:
+                
+                case 4:
+
+                case 5:
+
+                case 6:
+
+                case 7:
+
+                case 8:
+
+                case 9:
+
+                case 10:
+
+                case 11:
+
+                case 12:
+
+                case 13:
+
+                default:
+                    System.out.println("Gracias por ver este hermoso programa :3");
+        }
+        System.out.println("Deseas repetir el programa?Si lo deseas escriba s");
+        /*
+            Para recibir la respuesta debo de obtener un caracter s
+            para cuando se reciben char se utiliza ''
+            para cuando se reciben String se utiliza ""
+        */
+
+        letras = entrada.next().charAt(0);
+
+        //si el usuario ingresa si solo detecto la s
+
+    }while(letras == 's');
+    //aqui se cierra el do
+
+    }
+
+    
+
+}
