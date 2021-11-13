@@ -8,7 +8,7 @@ números enteros comprendidos entre el 1 y el 10, es decir,
 
 import java.util.Scanner;
 
-class Ejercicio2{
+public class Ejercicio2{
     //el identado del codigo
     //metodo principal
     public static void main(String[]args){

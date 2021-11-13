@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.lang.Math;
-class Ejercicio4 {
+public class Ejercicio4 {
     public static void main(String [] args){
         Scanner d = new Scanner(System.in);
         double radio,h,a,v;

@@ -2,16 +2,16 @@
 Vamos a crear un programa que se encargue de realizar las siguientes operaciones
 1.- Bono o descuento por edad
 2.- Convertir numeros decimales a binarios
-3.- Convertir temperaturas celcius, kelvine y rankine
+3.- Convertir temperaturas celcius, kelvine y rankine 
 4.- Numero de positivos y negativos segun una lista de numeros
 5.- Tiendita peke
-6.- Area y Perimetro de figuras geometricas
+6.- Area y Perimetro de figuras geometricas 
 7.- Tabla
 8.- Factorial
 9.- Dibujitos de codigo
 10.- Figuras huecas de codigo
-11.- Patrones de codigos
-12.- Diamante de codigo
+11.- Patrones de codigos 
+12.- Diamante de codigo 
 13.- Calculadora
 14.- Salir
 */ 
@@ -157,7 +157,81 @@ class EstructuradeDatos{
 
 
                 case 3:
-                    //tarea
+                    /*
+                    Convertir temperaturas celcius, kelvine y rankine 
+                    */
+                    public void menu(){
+             
+                        System.out.println("a.- Celsius a Kelvine");
+                        System.out.println("b.- Kelvine a Celsius");
+                        System.out.println("c.- Celsius a Rankine");
+                        System.out.println("d.- Rankine a Celsius");
+                        System.out.println("e.- Kelvine a Rankine");
+                        System.out.println("f.- Rankine a Kelvine");
+
+                
+                        op = entrada.next().charAt(0);
+                
+                        switch(op){
+                            case 'a':
+                                //implementar metodos independientes para cada opcion
+                                Ejercicioa();
+                                break;
+                
+                            case 'b':
+                                Ejerciciob();
+                                break;
+                
+                            case 'c':
+                                Ejercicioc();
+                                break;
+                
+                            case 'd':
+                                Ejerciciod();
+                                break;
+                            case 'e':
+                                Ejercicioe();
+                                break;    
+                                
+                            case 'f':
+                                Ejerciciof();
+                                break;
+                        
+                        
+                
+                            default: 
+                                System.out.println("Fin de tu temperatura");
+                        }
+                    }
+                    public void Ejercicioa (){
+                         double kelvine=0.00, celsius=0.00 ;
+                         double k, c, r;
+                         op = entrada.next().charAt(0);
+
+                         System.out.println("Ingresa la cantidad en celsius");
+                         celsius = entrada.nextDouble();
+                         k= celsius + 273.17;
+
+                         System.out.println("La cantidad de celsius a kelvin es:" +celsius);
+                         break;
+                        } 
+                    public void Ejerciciob (){
+                         double kelvine=0.00, celsius=0.00 ;
+                         double k, c, r;
+                         op = entrada.next().charAt(0);
+   
+                         System.out.println("Ingresa la cantidad en celsius");
+                         kelvine = entrada.nextDouble();
+                         c= kelvine - 273.17;
+   
+                         System.out.println("La cantidad de kelvin a celsius es:" +kelvine);
+                         break;
+                        } 
+
+                     
+                     
+
+                
 
                 case 4:
 
@@ -217,7 +291,7 @@ class EstructuradeDatos{
                     System.out.println("El resultado es: " + resultado);
 
                 case 6:
-                    //tarea
+                   
 
                 case 7: 
                     for(n = 1; n<= 10; n++){
