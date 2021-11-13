@@ -164,40 +164,18 @@ class EstructuradeDatos{
              
                         System.out.println("a.- Celsius a Kelvine");
                         System.out.println("b.- Kelvine a Celsius");
-                        System.out.println("c.- Celsius a Rankine");
-                        System.out.println("d.- Rankine a Celsius");
-                        System.out.println("e.- Kelvine a Rankine");
-                        System.out.println("f.- Rankine a Kelvine");
-
                 
                         op = entrada.next().charAt(0);
                 
                         switch(op){
                             case 'a':
-                                //implementar metodos independientes para cada opcion
+                                
                                 Ejercicioa();
                                 break;
                 
                             case 'b':
                                 Ejerciciob();
                                 break;
-                
-                            case 'c':
-                                Ejercicioc();
-                                break;
-                
-                            case 'd':
-                                Ejerciciod();
-                                break;
-                            case 'e':
-                                Ejercicioe();
-                                break;    
-                                
-                            case 'f':
-                                Ejerciciof();
-                                break;
-                        
-                        
                 
                             default: 
                                 System.out.println("Fin de tu temperatura");
@@ -227,11 +205,8 @@ class EstructuradeDatos{
                          System.out.println("La cantidad de kelvin a celsius es:" +kelvine);
                          break;
                         } 
-
-                     
-                     
-
-                
+                        break;
+    
 
                 case 4:
 
