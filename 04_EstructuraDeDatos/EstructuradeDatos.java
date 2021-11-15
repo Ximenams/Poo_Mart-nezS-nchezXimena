@@ -204,8 +204,8 @@ class EstructuradeDatos{
    
                          System.out.println("La cantidad de kelvin a celsius es:" +kelvine);
                          break;
-                        } 
-                        break;
+                         
+                    }   
     
 
                 case 4:
@@ -363,10 +363,10 @@ class EstructuradeDatos{
                     break;
 
                 case 11:
-                    //tarea
+                    
 
                 case 12:
-                    //tarea
+             
 
                 case 13:
 
