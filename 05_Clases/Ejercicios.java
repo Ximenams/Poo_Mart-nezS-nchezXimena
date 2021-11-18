@@ -241,42 +241,19 @@ public class Ejercicios{
 
     public void Ejercicio4(){
   
-        System.out.println("Imprimir una figura");
-                    System.out.println("Inserta el num de lados: ");
-                    n = entrada.nextInt();
-
-                    if( n>= 1 && n <=20){
-                        //se puede imprimir
-
-                        //imprima la linea superior
-                        for(int i = 0; i < n; i++){
-                            System.out.print(" * ");
-                        }
-                        System.out.println();
-
-                      
-                        for(int i = 0; i < n-2; i++){
-                            System.out.print(" / ");
-                            //columnas
-                            for(int j = 0; j < n-2; j++){
-                                System.out.print("  ");
-
-                            }
-                        System.out.println("   * ");
-
-
-                            
-                        }
-
-                        for(int i = 0; i < n; i++){
-                            System.out.print(" / ");
-                        }
-                        System.out.println();
-                    }else{
-                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
-                    }
-
-                    break;
+            System.out.println("*\n**\n***\n****\n*****");
+            System.out.println();
+            System.out.println();
+            System.out.print("*********");
+            System.out.print("/////////");
+            System.out.print("*********");
+            System.out.print("/////////");
+            System.out.print("*********");
+            System.out.print("/////////");
+            System.out.println();
+            System.out.println();  
+            System.out.printf("%s\n%s\n%s\n","*","***","*****");
+        
 
     }
 }
