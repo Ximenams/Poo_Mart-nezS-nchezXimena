@@ -27,7 +27,6 @@ public class Ejercicios{
         System.out.println("a.- Calculadora");
         System.out.println("b.- Conversion de unidades");
         System.out.println("c.- Creacion de cuadros");
-        System.out.println("d.- Movimiento en cuadro");
         System.out.println("Cualquier otra opcion sale del programa");
 
         op = entrada.next().charAt(0);
@@ -46,10 +45,6 @@ public class Ejercicios{
 
             case 'c':
                 Ejercicio3();
-                break;
-
-            case 'd':
-                Ejercicio4();
                 break;
 
             default: 
@@ -239,21 +234,4 @@ public class Ejercicios{
 
     }
 
-    public void Ejercicio4(){
-  
-        
-        System.out.println("--------\n");
- 
-		for(int i=0;i<lineas;i++)
-		{
-			for(int j=0;j<lineas;j++)
-			{
-				System.out.print("*");
-				System.out.print("/");
-			}
-			System.out.print("\n");
-		}
-        
-
-    }
 }
