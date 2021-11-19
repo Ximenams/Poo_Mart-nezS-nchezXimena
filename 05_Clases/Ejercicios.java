@@ -242,14 +242,17 @@ public class Ejercicios{
     public void Ejercicio4(){
   
         
-            System.out.print("*********");
-            System.out.print("/////////");
-            System.out.print("*********");
-            System.out.print("/////////");
-            System.out.print("*********");
-            System.out.print("/////////");
-            System.out.println();
-            System.out.println();  
+        System.out.println("--------\n");
+ 
+		for(int i=0;i<lineas;i++)
+		{
+			for(int j=0;j<lineas;j++)
+			{
+				System.out.print("*");
+				System.out.print("/");
+			}
+			System.out.print("\n");
+		}
         
 
     }
