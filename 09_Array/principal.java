@@ -4,7 +4,7 @@ public class principal{
 
        //Array funciones = new Array();
 
-        //funciones.Array();
+       //funciones.Array();
 
         //array1 funciones = new array1();
 

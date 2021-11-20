@@ -26,9 +26,8 @@ public class Array {
             }
         }
         System.out.println("Valores pares:" + media/5);
-
-
     }
+
 
     
 }
