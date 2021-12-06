@@ -10,11 +10,12 @@ package com.mycompany._ejemploserializacion;
  * @author Ximen
  */
 public class Serializable {
-    
+   
     public static void main(String[] args){
     
             Funciones fun = new Funciones();
             fun.menu();
+          
     }
     
 }

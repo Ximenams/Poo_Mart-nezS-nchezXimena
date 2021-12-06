@@ -26,7 +26,7 @@ public class Funciones {
     Persona profesor = new Profesor();
     
     Persona alumno = new Alumno();
-    
+   
     //menu
     
     void menu(){

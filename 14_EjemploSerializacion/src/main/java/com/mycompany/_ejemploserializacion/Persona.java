@@ -17,6 +17,7 @@ public abstract class Persona implements Serializable {
     //esta persona va a ser polimorfica
     private String nombre;
     private int edad;
+
     
     public Persona(){
     }
@@ -24,11 +25,8 @@ public abstract class Persona implements Serializable {
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
-    }
+  
     
-
-    
-
     public String getNombre() {
         return nombre;
     }

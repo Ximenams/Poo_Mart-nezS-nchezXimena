@@ -22,9 +22,9 @@ public class Ventana {
         */
         
         JFrame ventana = new JFrame("Hola mundo");
-        
+       
         //hay que definir el tamaño de la ventana
-        ventana.setSize(400, 150);
+        ventana.setSize(500, 350);
         //definir sus acciones de la ventana
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -47,6 +47,9 @@ public class Ventana {
         
         //agregamos los componentes como:
         JLabel userlabel = new JLabel("Nombre de usuario");
+        JLabel apellido1label = new JLabel("Apellido Paterno");
+        JLabel apellido2label = new JLabel("Apellido Materno");
+
         /*
         para inicializar los componentes se utiliza el metodo
         
@@ -69,23 +72,37 @@ public class Ventana {
         usertext.setBounds(160, 10, 160, 25);
         panel.add(usertext);
         
+        apellido1label.setBounds(10, 30, 120, 50);
+        panel.add(apellido1label);
+        JTextField apellido1text = new JTextField(20);
+        apellido1text.setBounds(160, 60, 160, 25);
+        panel.add(apellido1text);
+        
+        apellido2label.setBounds(10, 55, 120, 50);
+        panel.add(apellido2label);
+        JTextField apellido2text = new JTextField(20);
+        apellido2text.setBounds(160, 75, 160, 25);
+        panel.add(apellido1text);
+        
+        
+        
         //etiqueta de password
         
         JLabel userpassword = new JLabel("Password");
-        userpassword.setBounds(10, 40, 80, 50);
+        userpassword.setBounds(10, 68, 80, 50);
         panel.add(userpassword);
         
         JTextField passtext = new JTextField(20);
-        passtext.setBounds(160, 40, 160, 25);
+        passtext.setBounds(160, 85, 160, 25);
         panel.add(passtext);
         
         //dos botones
         JButton loginbutton = new JButton("Iniciar Sesion");
-        loginbutton.setBounds(10, 80, 120, 25);
+        loginbutton.setBounds(50, 130, 120, 25);
         panel.add(loginbutton);
         
         JButton registrobutton = new JButton("Registrarse");
-        registrobutton.setBounds(180, 80, 120, 25);
+        registrobutton.setBounds(190, 130, 120, 25);
         panel.add(registrobutton);
         
         /*
