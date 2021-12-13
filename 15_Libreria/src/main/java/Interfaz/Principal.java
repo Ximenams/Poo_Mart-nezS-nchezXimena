@@ -31,9 +31,15 @@ public class Principal {
 
         
         int opcion;
+        int opcion1;
+        int opcion2;
+        int opcion3;
         
         do{
-            System.out.println("Bienvenido a la Bliblioteca de Sara Cortes y Ximena Martinez");
+            System.out.println("Bienvenido a la Bliblioteca ");
+            System.out.println("Ximena Martínez Sánchez ");
+            System.out.println("Sara Cortes Hernandez");
+            System.out.println("Grupo 15");
             System.out.println("Ingrese la opcion deseada:");
             System.out.println("1.- Gestionar Libros");
             System.out.println("2.- Gestionar Revistas");
@@ -44,29 +50,109 @@ public class Principal {
             
             switch (opcion) {
                 case 1:
-                    //agregar libro
-                    listadelibrosobj.agregarLibro();
-                    listaderevistasobj.agregarRevista();
-                    listadeperiodicosobj.agregarPeriodico();
+                    do {
+                        System.out.println("1.- Agregar nuevo Libro");
+                        System.out.println("2.- Consultar Libro");
+                        System.out.println("3.- Consultar todos los libros");
+                        System.out.println("4.- Borrar un libro");
+                        System.out.println("5.- Modificar los datos de un libro");
+                        System.out.println("6.- Salir");
 
-                    
-                    
-                    break;
+                        opcion1 = entrada.nextInt();
+
+                        switch (opcion1){
+                            case 1:
+                                listadelibrosobj.agregarLibro();
+                                break;
+                            case 2:
+                                listadelibrosobj.buscar();
+                                break;
+                            case 3:
+                                listadelibrosobj.consultaGeneral();
+                                break;
+                            case 4:
+                                listadelibrosobj.borrar();
+                                break;
+                            case 5:
+                                listadelibrosobj.modificar();
+                                break;
+                            case 6:
+                                System.out.println("Adios");
+
+                        default:
+                         System.out.println("Error ingrese una opcion valida");
+                        }        
+                    }while((opcion1 >= 1)&&(opcion1 < 6));
                 case 2:
-                    //consultar libros por el id
-                    listadelibrosobj.buscar();
-                    break;
+                    do{
+                        System.out.println("1.- Agregar nueva Revista");
+                        System.out.println("2.- Consultar Revista");
+                        System.out.println("3.- Consultar todas las revistas");
+                        System.out.println("4.- Borrar una revista");
+                        System.out.println("5.- Modificar los datos de una revista");
+                        System.out.println("6.- Salir");
+
+                        opcion2 = entrada.nextInt();
+
+                        switch (opcion2){
+                            case 1:
+                                listaderevistasobj.agregarRevista();
+                                break;
+                            case 2:
+                                listaderevistasobj.buscar();
+                                break;
+                            case 3:
+                                listaderevistasobj.consultaGeneral();
+                                break;
+                            case 4:
+                                listaderevistasobj.borrar();
+                                break;
+                            case 5:
+                                listaderevistasobj.modificar();
+                                break;
+                            case 6:
+                                System.out.println("Adios");
+                        default:
+                         System.out.println("Error ingrese una opcion valida");
+                        }
+                    }while((opcion2 >= 1)&&(opcion2 < 6));
+
+
                 case 3: 
-                    //consulta de todos los libros
-                    listadelibrosobj.consultaGeneral();
-                    break;
-                case 4: 
-                    listadelibrosobj.borrar();
-                    break;
-                case 5:
-                    listadelibrosobj.modificar();
-                    break;
-                case 6:
+                    do{
+                        System.out.println("1.- Agregar nuevo periodico");
+                        System.out.println("2.- Consultar Periodico");
+                        System.out.println("3.- Consultar todos los periodicos");
+                        System.out.println("4.- Borrar un periodico");
+                        System.out.println("5.- Modificar los datos de un periodico");
+                        System.out.println("6.- Salir");
+
+                        opcion3 = entrada.nextInt();
+
+                        switch(opcion3){
+                            case 1:
+                                listadeperiodicosobj.agregarPeriodico();
+                                break;
+                            case 2:
+                                listadeperiodicosobj.buscar();
+                                break;
+                            case 3:
+                                listadeperiodicosobj.consultaGeneral();
+                                break;
+                            case 4:
+                                listadeperiodicosobj.borrar();
+                                break;                                     
+                            case 5:
+                                listadeperiodicosobj.modificar();
+                                break;
+                            case 6:
+                                System.out.println("Adios");
+                        default:
+                         System.out.println("Error ingrese una opcion valida");
+                        }
+                    }while((opcion3 >= 1)&&(opcion3 < 6));
+               
+                case 4:
                     System.out.println("Adios gracias por su alma");
                     //cuando vamos a generar el archivo
                     listadelibrosobj.grabar();
@@ -74,7 +160,7 @@ public class Principal {
                     System.out.println("Error ingrese una opcion valida");
             }
         
-        }while((opcion >= 1)&&(opcion < 6));
+        }while((opcion >= 1)&&(opcion < 4));
     }
     
 }

@@ -24,10 +24,7 @@ public class ManipularPeriodicos implements Serializable{
     
     
     public ManipularPeriodicos(){
-        //vamos a cargar la instancia de la lista de los libros
         listadeperiodicos = new ArrayList<Periodico>();
-        //vamos aplicar una sobrecarga al objeto para mandar
-        //a llamara su lectura correspondiente del archivo creado
         listadeperiodicos = objetoarchivoperiodicos.leer();
     }
     
@@ -53,11 +50,12 @@ public class ManipularPeriodicos implements Serializable{
         }else{
             System.out.println("Los periodicos son:");
             for(int i = 0; i < listadeperiodicos.size(); i++){
-                System.out.println("Fecha de publicacion: " + listadeperiodicos.get(i).getFecha2()+"\n");
-                System.out.println("Nombre del Periodico: " + listadeperiodicos.get(i).getNombre()+"\n");
+                System.out.println("Nombre del Periodico: " + listadeperiodicos.get(i).getNombre()+"\n");                
                 System.out.println("Autor del Periodico: " + listadeperiodicos.get(i).getAutor()+"\n");
                 System.out.println("Editorial del Periodico: " + listadeperiodicos.get(i).getEditorial()+"\n");
                 System.out.println("Precio del Periodico: " + listadeperiodicos.get(i).getPrecio()+"\n");
+                System.out.println("Fecha de publicacion: " + listadeperiodicos.get(i).getFecha()+"\n");
+
             }
         }
     }
@@ -98,7 +96,7 @@ public class ManipularPeriodicos implements Serializable{
         
         posbuscar = traePosicion(nombreBuscar);
         
-        System.out.println("Fecha de publicacion: " + listadeperiodicos.get(posbuscar).getFecha2());
+        System.out.println("Fecha de publicacion: " + listadeperiodicos.get(posbuscar).getFecha());
         System.out.println("Nombre del Periodico: " + listadeperiodicos.get(posbuscar).getNombre());
         System.out.println("Autor del Periodico: " + listadeperiodicos.get(posbuscar).getAutor());
         System.out.println("Editorial del Periodico: " + listadeperiodicos.get(posbuscar).getEditorial());
@@ -166,7 +164,7 @@ public class ManipularPeriodicos implements Serializable{
                     //autor
                     System.out.println("El autor es: ");
                     System.out.println("Autor: " + listadeperiodicos.get(posmodificar).getAutor());
-                    System.out.println("Ingresa el nuevo actor");
+                    System.out.println("Ingresa el nuevo autor");
                     listadeperiodicos.get(posmodificar).setAutor(entrada.next());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Autor: " + listadeperiodicos.get(posmodificar).getAutor());
@@ -188,7 +186,7 @@ public class ManipularPeriodicos implements Serializable{
                     //precio
                     System.out.println("El precio es: ");
                     System.out.println("Precio: " + listadeperiodicos.get(posmodificar).getPrecio());
-                    System.out.println("Ingresa la nueva editorial");
+                    System.out.println("Ingresa el nuevo precio");
                     listadeperiodicos.get(posmodificar).setPrecio(entrada.nextFloat());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Precio: " + listadeperiodicos.get(posmodificar).getPrecio());
@@ -197,11 +195,11 @@ public class ManipularPeriodicos implements Serializable{
                 case 4:
                     //fecha de publicacion
                     System.out.println("La fecha de publicacion es:");
-                    System.out.println("fecha de publicacion: " + listadeperiodicos.get(posmodificar).getFecha2());
+                    System.out.println("fecha de publicacion: " + listadeperiodicos.get(posmodificar).getFecha());
                     System.out.println("Ingresa la nueva editorial");
                     listadeperiodicos.get(posmodificar).setFecha2(entrada.next());
                     System.out.println("El dato a sido modificado");
-                    System.out.println("La fecha de publicacion es: " + listadeperiodicos.get(posmodificar).getFecha2());
+                    System.out.println("La fecha de publicacion es: " + listadeperiodicos.get(posmodificar).getFecha());
                     
                     break;
                     

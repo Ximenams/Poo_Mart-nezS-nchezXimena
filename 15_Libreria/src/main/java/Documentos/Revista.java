@@ -5,8 +5,8 @@
  */
 package Documentos;
 
-import java.util.Scanner;
-
+import java.io.*;
+import java.util.*;
 /**
  *
  * @author Ximen
@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Revista {
     
     //Tipo_Revista -< espectaculos, chismes, de no tengo idea pq no compro
-    private String tipo_revista;
+    private String tiporevista;
     private String nombre;
     private String autor;
     private String editorial;
@@ -24,20 +24,20 @@ public class Revista {
     
     }
 
-    public Revista(String tipo_revista, String nombre, String autor, String editorial, float precio) {
+    public Revista(String tiporevista, String nombre, String autor, String editorial, float precio) {
         this.nombre = nombre;
         this.autor = autor;
         this.editorial = editorial;
         this.precio = precio;
-        this.tipo_revista = tipo_revista;
+        this.tiporevista = tiporevista;
     }
 
-    public String getTipo_revista() {
-        return tipo_revista;
+    public String getTiporevista() {
+        return tiporevista;
     }
 
-    public void setTipo_revista(String tipo_revista) {
-        this.tipo_revista = tipo_revista;
+    public void setTiporevista(String tiporevista) {
+        this.tiporevista = tiporevista;
     }
     
     public String getNombre() {
@@ -75,16 +75,20 @@ public class Revista {
     
     //los datos del tipo de revista 
     
-    public void agregarRevista(){
-        //primero necesito jalar el metodo de aceptar datos y despues agregar
-        //el tipo de revista
-        CLibro datoslibro = new CLibro();
+    public void aceptarDatos(){
         
         Scanner entrada = new Scanner(System.in);
-        
-        datoslibro.aceptarDatos(); //tdos los datos del documento
-        System.out.println("Ingresa el tipo de revista");
-        tipo_revista = entrada.nextLine(); 
+        System.out.println("Ingresa el nombre de la revista: ");
+        nombre = entrada.nextLine();
+        System.out.println("Ingresa el nombre del autor: ");
+        autor = entrada.nextLine();
+        System.out.println("Ingresa la editorial de la revista: ");
+        editorial = entrada.nextLine();
+        System.out.println("Ingresa el tipo de revista:");
+        tiporevista = entrada.nextLine(); 
+        System.out.println("Ingresa el precio de la revista:");
+        precio = entrada.nextFloat();
+       
     }
     
 }

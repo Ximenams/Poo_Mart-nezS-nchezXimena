@@ -144,7 +144,7 @@ public class ManipularLibros implements Serializable{
         if(listadelibros.isEmpty()){
             System.out.println("No hay libros registrados");
         }else{
-            System.out.println("Ingresa el ID del libro que vas a eliminar: ");
+            System.out.println("Ingresa el Nombre del libro que vas a eliminar: ");
             posborrar = buscar();
             
             if(posborrar < listadelibros.size()){
@@ -193,7 +193,7 @@ public class ManipularLibros implements Serializable{
                     //autor
                     System.out.println("El autor es: ");
                     System.out.println("Autor: " + listadelibros.get(posmodificar).getAutor());
-                    System.out.println("Ingresa el nuevo actor");
+                    System.out.println("Ingresa el nuevo autor");
                     listadelibros.get(posmodificar).setAutor(entrada.next());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Autor: " + listadelibros.get(posmodificar).getAutor());

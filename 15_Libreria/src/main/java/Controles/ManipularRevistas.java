@@ -23,10 +23,7 @@ public class ManipularRevistas implements Serializable {
     
     
     public ManipularRevistas(){
-        //vamos a cargar la instancia de la lista de los libros
         listaderevistas = new ArrayList<Revista>();
-        //vamos aplicar una sobrecarga al objeto para mandar
-        //a llamara su lectura correspondiente del archivo creado
         listaderevistas = objetoarchivorevistas.leer();
     }
     
@@ -52,7 +49,7 @@ public class ManipularRevistas implements Serializable {
         }else{
             System.out.println("Las revistas son:");
             for(int i = 0; i < listaderevistas.size(); i++){
-                System.out.println("Tipo de Revista : " + listaderevistas.get(i).getTipo_revista()+"\n");
+                System.out.println("Tipo de Revista : " + listaderevistas.get(i).getTiporevista()+"\n");
                 System.out.println("Nombre de la Revista: " + listaderevistas.get(i).getNombre()+"\n");
                 System.out.println("Autor de la Revista: " + listaderevistas.get(i).getAutor()+"\n");
                 System.out.println("Editorial de la Revista: " + listaderevistas.get(i).getEditorial()+"\n");
@@ -96,7 +93,7 @@ public class ManipularRevistas implements Serializable {
         
         posbuscar = traePosicion(nombreBuscar);
         
-        System.out.println("Tipo de Revista: " + listaderevistas.get(posbuscar).getTipo_revista());
+        System.out.println("Tipo de Revista: " + listaderevistas.get(posbuscar).getTiporevista());
         System.out.println("Nombre de la Revista: " + listaderevistas.get(posbuscar).getNombre());
         System.out.println("Autor de la Revista: " + listaderevistas.get(posbuscar).getAutor());
         System.out.println("Editorial de la Revista: " + listaderevistas.get(posbuscar).getEditorial());
@@ -163,7 +160,7 @@ public class ManipularRevistas implements Serializable {
                     //autor
                     System.out.println("El autor es: ");
                     System.out.println("Autor: " + listaderevistas.get(posmodificar).getAutor());
-                    System.out.println("Ingresa el nuevo actor");
+                    System.out.println("Ingresa el nuevo autor");
                     listaderevistas.get(posmodificar).setAutor(entrada.next());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Autor: " + listaderevistas.get(posmodificar).getAutor());
@@ -185,7 +182,7 @@ public class ManipularRevistas implements Serializable {
                     //precio
                     System.out.println("El precio es: ");
                     System.out.println("Precio: " + listaderevistas.get(posmodificar).getPrecio());
-                    System.out.println("Ingresa la nueva editorial");
+                    System.out.println("Ingresa el nuevo costo");
                     listaderevistas.get(posmodificar).setPrecio(entrada.nextFloat());
                     System.out.println("El dato a sido modificado");
                     System.out.println("Precio: " + listaderevistas.get(posmodificar).getPrecio());
@@ -194,11 +191,11 @@ public class ManipularRevistas implements Serializable {
                 case 4:
                     //tipo de revista
                     System.out.println("El tipo de revista es:");
-                    System.out.println("Tipo de revista: " + listaderevistas.get(posmodificar).getTipo_revista());
-                    System.out.println("Ingresa la nueva editorial");
-                    listaderevistas.get(posmodificar).setTipo_revista(entrada.next());
+                    System.out.println("Tipo de revista: " + listaderevistas.get(posmodificar).getTiporevista());
+                    System.out.println("Ingresa el nuevo tipo de revista");
+                    listaderevistas.get(posmodificar).setTiporevista(entrada.next());
                     System.out.println("El dato a sido modificado");
-                    System.out.println("Tipo de revista: " + listaderevistas.get(posmodificar).getTipo_revista());
+                    System.out.println("Tipo de revista: " + listaderevistas.get(posmodificar).getTiporevista());
                     
                     break;
                     
