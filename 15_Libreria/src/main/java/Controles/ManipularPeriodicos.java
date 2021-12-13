@@ -14,21 +14,15 @@ import Documentos.Periodico;
 import java.util.*;
 import java.io.*;
 
-public class ManipularPeriodicos implements Serializable{
-    
-    
-    private ArrayList<Periodico> listadeperiodicos;
-    
-    
+public class ManipularPeriodicos implements Serializable{   
+    private ArrayList<Periodico> listadeperiodicos;    
     private ArchivoP objetoarchivoperiodicos = new ArchivoP();
-    
     
     public ManipularPeriodicos(){
         listadeperiodicos = new ArrayList<Periodico>();
         listadeperiodicos = objetoarchivoperiodicos.leer();
     }
-    
-    //crud
+
     public void agregarPeriodico(){
         Scanner entrada = new Scanner(System.in);
         char resp = 's';
@@ -41,8 +35,7 @@ public class ManipularPeriodicos implements Serializable{
             resp = entrada.next().charAt(0);
         }
     }
-    
-    
+      
     public void consultaGeneral(){
         
         if(listadeperiodicos.isEmpty()){
@@ -82,10 +75,7 @@ public class ManipularPeriodicos implements Serializable{
         }
         return pos;
     }
-    
-    
-   
-    
+     
     public int buscar(){
         int posbuscar = 0;
         String nombreBuscar;
@@ -104,15 +94,11 @@ public class ManipularPeriodicos implements Serializable{
         
         return posbuscar;
     }
-    
-    
+       
     public void borrar(){
-        
         Scanner entrada = new Scanner(System.in);
-        
         String periodicoborrar;
         int posborrar;
-        
         
         if(listadeperiodicos.isEmpty()){
             System.out.println("No hay periodicos registrados");
@@ -126,26 +112,20 @@ public class ManipularPeriodicos implements Serializable{
             }else{
                 System.out.println("Imposible elminar ese registro");
             }
-        }
-        
-        
+        }   
     }
-    
    
-    
     public void modificar(){
         int posmodificar = 0;
         int resmod = 0;
         String modificar;
         String opcion = "s";
-        
-        
+                
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Ingresa el nombre del Periodico que deseas modificar: ");
         modificar = entrada.nextLine();
-        
-        
+               
         while("s".equalsIgnoreCase(opcion)){
             posmodificar = traePosicion(modificar);
             
@@ -209,8 +189,7 @@ public class ManipularPeriodicos implements Serializable{
             System.out.println("¿Quieres cambiar algun otro dato s/n?");
             opcion = entrada.nextLine();
         }
-    }
-    
+    }   
     
     public void grabar(){
         //mandando a llamar a que se cree el archivo
@@ -231,9 +210,5 @@ public class ManipularPeriodicos implements Serializable{
 
     public void setObjetoarchivoperiodicos(ArchivoP objetoarchivolibros) {
         this.objetoarchivoperiodicos= objetoarchivoperiodicos;
-    }
-    
-    
-    
-    
+    }   
 }

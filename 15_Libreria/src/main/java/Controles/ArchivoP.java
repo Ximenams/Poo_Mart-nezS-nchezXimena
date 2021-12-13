@@ -18,8 +18,6 @@ class ArchivoP implements Serializable {
  
     ArrayList<Periodico> listarecuperada = new ArrayList<Periodico>();
     
-    //metodo para generar la lectura del archivo
-    //metodo que lee el archivo
     public ArrayList<Periodico> leer(){
         try{
             //primero tenemos que crear la lectura del buffer de objetos
@@ -33,28 +31,16 @@ class ArchivoP implements Serializable {
         return listarecuperada;
     }
     
-    //el metodo que serializa
-    //metodo que escribe el archivo
     void serializar(ArrayList<Periodico> listaserializada){
         try{
-            //generar el archivo de salida
             FileOutputStream salida = new FileOutputStream("periodico.txt");
-            //generar la creacion de los objetos
             ObjectOutputStream salidaobjeto = new ObjectOutputStream(salida);
-            
-            //ya que tengo la generacion de la salida la escribimos
-            
-            salidaobjeto.writeObject(listaserializada);
-            
+            salidaobjeto.writeObject(listaserializada);            
             salidaobjeto.close();
         }catch(Exception e){
             System.out.println("Error: " + e.getMessage());
             System.out.println("Se origino :" + e.getStackTrace());
         }
-    }
-
-   
-    
-    
+    }   
 }
 

@@ -58,8 +58,4 @@ class ArchivoL implements Serializable {
             System.out.println("Se origino :" + e.getStackTrace());
         }
     }
-
-   
-    
-    
 }

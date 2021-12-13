@@ -14,24 +14,18 @@ import Documentos.Revista;
 import java.util.*;
 import java.io.*;
 
-public class ManipularRevistas implements Serializable {
-      
+public class ManipularRevistas implements Serializable {     
     private ArrayList<Revista> listaderevistas;
-    
-    
     private ArchivoR objetoarchivorevistas = new ArchivoR();
-    
-    
+
     public ManipularRevistas(){
         listaderevistas = new ArrayList<Revista>();
         listaderevistas = objetoarchivorevistas.leer();
     }
-    
-    //crud
+
     public void agregarRevista(){
         Scanner entrada = new Scanner(System.in);
         char resp = 's';
-
         while(resp == 's'){
             Revista objrevistas = new Revista();
             objrevistas.aceptarDatos();
@@ -41,9 +35,7 @@ public class ManipularRevistas implements Serializable {
         }
     }
     
-    
-    public void consultaGeneral(){
-        
+    public void consultaGeneral(){ 
         if(listaderevistas.isEmpty()){
             System.out.println("No hay revistas agregadas");
         }else{
@@ -73,26 +65,19 @@ public class ManipularRevistas implements Serializable {
         }
         
         if(!existe){
-            //porque esta fuera del arreglo o la lista osea no existe
             System.out.println("No existe registro de la Revista");
             pos = -1;
         }
         return pos;
     }
     
-    
-   
-    
     public int buscar(){
         int posbuscar = 0;
         String nombreBuscar;
-        Scanner entrada = new Scanner(System.in);
-        
+        Scanner entrada = new Scanner(System.in);       
         System.out.println("Ingresa el nombre de la revista que desea buscar");
-        nombreBuscar = entrada.nextLine();
-        
-        posbuscar = traePosicion(nombreBuscar);
-        
+        nombreBuscar = entrada.nextLine();        
+        posbuscar = traePosicion(nombreBuscar);        
         System.out.println("Tipo de Revista: " + listaderevistas.get(posbuscar).getTiporevista());
         System.out.println("Nombre de la Revista: " + listaderevistas.get(posbuscar).getNombre());
         System.out.println("Autor de la Revista: " + listaderevistas.get(posbuscar).getAutor());
@@ -101,16 +86,11 @@ public class ManipularRevistas implements Serializable {
         
         return posbuscar;
     }
-    
-    
-    public void borrar(){
-        
-        Scanner entrada = new Scanner(System.in);
-        
+       
+    public void borrar(){        
+        Scanner entrada = new Scanner(System.in);       
         String revistaborrar;
-        int posborrar;
-        
-        
+        int posborrar;    
         if(listaderevistas.isEmpty()){
             System.out.println("No hay revistas registradas");
         }else{
@@ -123,26 +103,19 @@ public class ManipularRevistas implements Serializable {
             }else{
                 System.out.println("Imposible elminar ese registro");
             }
-        }
-        
-        
-    }
-    
-   
-    
+        }            
+    }  
     public void modificar(){
         int posmodificar = 0;
         int resmod = 0;
         String modificar;
         String opcion = "s";
         
-        
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Ingresa el nombre de la revista que deseas modificar: ");
         modificar = entrada.nextLine();
-        
-        
+               
         while("s".equalsIgnoreCase(opcion)){
             posmodificar = traePosicion(modificar);
             
@@ -227,10 +200,5 @@ public class ManipularRevistas implements Serializable {
 
     public void setObjetoarchivorevistas(ArchivoR objetoarchivorevistas) {
         this.objetoarchivorevistas= objetoarchivorevistas;
-    }
-    
-    
-    
-    
-    
+    }   
 }
