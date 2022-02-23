@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Directorio;
+package back;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,8 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Ximen
  */
-@WebServlet(name = "java", urlPatterns = {"/java"})
-public class java extends HttpServlet {
+public class Directorio extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,16 +35,31 @@ public class java extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet java</title>");            
+            out.println("<title>Servlet Directorio</title>"    
+                   + "<link rel=\"stylesheet\" href=\"css/style.css\"/>"); 
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet java at " + request.getContextPath() + "</h1>");
+            
+            String nom, correo;
+            int edad;
+            
+            nom = request.getParameter("nombre");
+            correo = request.getParameter("email");
+            edad = Integer.parseInt(request.getParameter("edad"));
+            
+            out.println("<h1>Bienvenido:  </h1>" + nom);
+            out.println("<br>"
+                    + "Tu edad es: " + edad);
+            out.println("<br>"
+                    + "Tu correo es: " + correo 
+                    + "<br>"
+                    + "<a href='index.html' >Regresar al Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+      // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

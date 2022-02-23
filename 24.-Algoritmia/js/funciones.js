@@ -1,5 +1,26 @@
 //tarea prooblema 1
+/*Dada una lista de palabras separadas por un espacio, 
+invierte el orden de dichas palabras. Las palabras solo 
+pueden estar separadas por un espacio.*/
+function problema1(){
+ 
+     int cantidad = Convert.ToInt32( Console.ReadLine() );
+ 
+     for (int i = 1; i <= cantidad; i++)
+     {
+        Console.ReadLine();
+        ProcesarYVolcar(texto, i);
+        Console.Write("Problema1: ", contador);        
+        for (int  i = palabras.Length; i > 0; i--)
+        {
+            Console.Write( palabras[i-1] );
+            if (i>1)  // Espacio separador, excepto tras la última
+              Console.Write(" ");
+        }
+ 
+        Console.WriteLine();
 
+}
 
 //problema 2
 function problema2(){
